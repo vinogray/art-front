@@ -12,11 +12,11 @@ class CustomForm extends React.Component {
         const title = event.target.elements.title.value;
         const content = event.target.elements.content.value;
 
-        // if (requstType === 'post') {
+        // if (requestType === 'post') {
         //     axios.post('http://127.0.0.1:8000/api/', {
         //         title: title,
         //         content: content})
-        // } else if (requstType === 'put') {
+        // } else if (requestType === 'put') {
         //     axios.put(`http://127.0.0.1:8000/api/${articleID}`, {
         //         title: title,
         //         content: content})
@@ -31,7 +31,7 @@ class CustomForm extends React.Component {
                 .then(res => console.log(res))
                 .catch(error => console.err(error));
             case 'put':
-                return axios.put(`http://127.0.0.1:8000/api/${articleID}`, {
+                return axios.put(`http://127.0.0.1:8000/api/${articleID}/`, {
                     title: title,
                     content: content
                 })
